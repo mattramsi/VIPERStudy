@@ -11,9 +11,12 @@ import UIKit
 
 class Form {
     
+   
     var fields: [Validatable] = []
     
-    init() {}
+    init() {
+
+    }
     
     init(fields: [Validatable]) {
         
@@ -30,12 +33,17 @@ class Form {
     }
     
     
-    func resultForm() {
+    func resultForm() -> Bool {
+        
+        var valid: Bool!
         
         if !fields.isEmpty {
             for i in 0...(self.fields.count - 1) {
                 print(self.fields[i].value)
+                valid = self.fields[i].isValid()
             }
         }
+        
+        return valid
     }
 }

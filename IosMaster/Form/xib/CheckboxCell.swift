@@ -16,6 +16,7 @@ class CheckboxCell: UITableViewCell, Validatable {
     var checkboxValid: Bool = false
     var form: Form!
     var value: Any?
+    var isTFValid: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,7 +40,9 @@ class CheckboxCell: UITableViewCell, Validatable {
             self.btn.backgroundColor = .clear
         }
         value = checkboxValid
+        isTFValid = checkboxValid
     }
     
     func setForm(form: Form) { self.form = form }
+    func isValid() -> Bool { return isTFValid }
 }

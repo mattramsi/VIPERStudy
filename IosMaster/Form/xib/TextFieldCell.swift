@@ -18,6 +18,7 @@ class TextFieldCell: UITableViewCell, Validatable {
     var typefield: Int = 1
     let maskCelular = MaskCelular()
     var form: Form!
+    var isTFValid: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,12 +39,14 @@ class TextFieldCell: UITableViewCell, Validatable {
     
         switch typefield {
         case 2:
+            self.isTFValid = true
             self.textField.validated()
             break
         case 4:
             self.textField.validated()
             if matches(regex: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}", string: self.textField.text) {
                 self.textField.validated()
+                self.isTFValid = true
             } else {
                 self.textField.invalidated()
             }
@@ -52,6 +55,7 @@ class TextFieldCell: UITableViewCell, Validatable {
             self.textField.delegate = maskCelular
             if matches(regex: "^[0-9]{11}$", string: self.textField.text?.withoutSpecialCharacters.removingWhitespaces) {
                 self.textField.validated()
+                self.isTFValid = true
             } else {
                 self.textField.invalidated()
             }
@@ -65,6 +69,7 @@ class TextFieldCell: UITableViewCell, Validatable {
     
     
     func setForm(form: Form) { self.form = form }
+    func isValid() -> Bool { return isTFValid }
 }
 
 

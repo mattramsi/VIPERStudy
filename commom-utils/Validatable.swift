@@ -12,6 +12,7 @@ import UIKit
 protocol Validatable {
     var value: Any? { get set }
     func setForm(form: Form)
+    func isValid() -> Bool
 }
 
 

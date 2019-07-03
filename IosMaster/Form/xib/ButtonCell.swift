@@ -32,20 +32,24 @@ class ButtonCell: UITableViewCell {
             switch title {
             case "Enviar":
                 
-               
-                if let viewController = parentVC as? ContatoFormViewController {
-                    parentVC?.form.resultForm()
+                if parentVC!.form.resultForm() {
                     let successView = createNib(nameNib: "MensagemEnviadaView", classe: MensagemEnviadaView.self)
                     successView?.tag = 199
                     successView?.enviarNovaMensagem = {
                         
-                        if let successView = viewController.view.viewWithTag(199) as? MensagemEnviadaView {
+                        if let successView = self.parentVC?.view.viewWithTag(199) as? MensagemEnviadaView {
                             successView.removeFromSuperview()
                         }
                     }
                     
-                    addNib(model: successView, view_container: viewController.view)
+                    addNib(model: successView, view_container: parentVC?.view)
+                } else {
+                    let alert = UIAlertController(title: "Alert", message: "Formulário Incompleto!", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+                    parentVC?.present(alert, animated: true, completion: nil)
                 }
+               
+                
                 break
             default:
                 print("No action")

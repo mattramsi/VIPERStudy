@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		17C00AEB22CC3CDA00B05E76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C00AE922CC3CDA00B05E76 /* Main.storyboard */; };
 		17C00AED22CC3CDD00B05E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17C00AEC22CC3CDD00B05E76 /* Assets.xcassets */; };
 		17C00AF022CC3CDD00B05E76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C00AEE22CC3CDD00B05E76 /* LaunchScreen.storyboard */; };
+		17C00AFD22CC4B8000B05E76 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C00AFC22CC4B8000B05E76 /* Cell.swift */; };
 		30263CE33CE33111DE4686C4 /* Pods_IosMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13BF7E2FF8A73B81645245AA /* Pods_IosMaster.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		17C00AEC22CC3CDD00B05E76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17C00AEF22CC3CDD00B05E76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17C00AF122CC3CDD00B05E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17C00AFC22CC4B8000B05E76 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		676AF0BC851DBDB9B0119AD6 /* Pods-IosMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosMaster.release.xcconfig"; path = "Target Support Files/Pods-IosMaster/Pods-IosMaster.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +48,6 @@
 				167D0DA79EE1FD5184768AAA /* Pods-IosMaster.debug.xcconfig */,
 				676AF0BC851DBDB9B0119AD6 /* Pods-IosMaster.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -89,6 +90,7 @@
 		17C00AF722CC3F0800B05E76 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				17C00AFC22CC4B8000B05E76 /* Cell.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -245,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17C00AE822CC3CDA00B05E76 /* ViewController.swift in Sources */,
+				17C00AFD22CC4B8000B05E76 /* Cell.swift in Sources */,
 				17C00AE622CC3CDA00B05E76 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

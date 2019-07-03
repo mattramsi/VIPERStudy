@@ -57,25 +57,4 @@ class ButtonCell: UITableViewCell {
 }
 
 
-extension UIButton {
-    
-    func roudedRed () {
-        self.backgroundColor = .red
-        self.setTitleColor(.white, for: .normal)
-        self.layer.cornerRadius = 20
-        self.layer.borderColor = UIColor.lightGray.cgColor
-    }
-    
-    func selectedTab() {
-        self.backgroundColor = hexStringToUIColor(hex: "#B91000")
-    }
-    
-    func deselectedTab() {
-        self.backgroundColor = hexStringToUIColor(hex: "#ff0000")
-    }
-    
-    
-    
-}
-
 

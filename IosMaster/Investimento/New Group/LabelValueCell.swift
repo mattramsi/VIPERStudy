@@ -16,15 +16,3 @@ class LabelValueCell: UITableViewCell {
     
 }
 
-
-class LabelDownCell: UITableViewCell {
-    
-    @IBOutlet weak var lbl_name: UILabel!
-    
-    @IBAction func download(_ sender: Any) {
-        guard let url = URL(string: "https://google.com") else { return }
-        UIApplication.shared.open(url)
-        
-    }
-    
-}

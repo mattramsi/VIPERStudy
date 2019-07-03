@@ -19,6 +19,10 @@
 		179798D922CD43A700F2C512 /* DINPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 179798D022CD43A700F2C512 /* DINPro-Regular.otf */; };
 		179798DA22CD43A700F2C512 /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 179798D122CD43A700F2C512 /* DINPro-Light.otf */; };
 		179798DB22CD43A700F2C512 /* DINMittelschriftStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 179798D222CD43A700F2C512 /* DINMittelschriftStd.otf */; };
+		179798DD22CD640100F2C512 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179798DC22CD640100F2C512 /* Form.swift */; };
+		179798DF22CD643A00F2C512 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179798DE22CD643A00F2C512 /* Validatable.swift */; };
+		179798E122CD648A00F2C512 /* LabelDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179798E022CD648A00F2C512 /* LabelDownCell.swift */; };
+		179798E322CD64A700F2C512 /* app-extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179798E222CD64A700F2C512 /* app-extensions.swift */; };
 		17C00AE622CC3CDA00B05E76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C00AE522CC3CDA00B05E76 /* AppDelegate.swift */; };
 		17C00AE822CC3CDA00B05E76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C00AE722CC3CDA00B05E76 /* ViewController.swift */; };
 		17C00AEB22CC3CDA00B05E76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C00AE922CC3CDA00B05E76 /* Main.storyboard */; };
@@ -69,6 +73,10 @@
 		179798D022CD43A700F2C512 /* DINPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Regular.otf"; sourceTree = "<group>"; };
 		179798D122CD43A700F2C512 /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Light.otf"; sourceTree = "<group>"; };
 		179798D222CD43A700F2C512 /* DINMittelschriftStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DINMittelschriftStd.otf; sourceTree = "<group>"; };
+		179798DC22CD640100F2C512 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
+		179798DE22CD643A00F2C512 /* Validatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
+		179798E022CD648A00F2C512 /* LabelDownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDownCell.swift; sourceTree = "<group>"; };
+		179798E222CD64A700F2C512 /* app-extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "app-extensions.swift"; sourceTree = "<group>"; };
 		17C00AE222CC3CDA00B05E76 /* IosMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C00AE522CC3CDA00B05E76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17C00AE722CC3CDA00B05E76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +141,7 @@
 				173EB95122CD154900ADAAD2 /* LabelValueCell.xib */,
 				173EB95422CD15A200ADAAD2 /* LabelValueCell.swift */,
 				179798C722CD23C000F2C512 /* LabelDownCell.xib */,
+				179798E022CD648A00F2C512 /* LabelDownCell.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -232,6 +241,9 @@
 			isa = PBXGroup;
 			children = (
 				17C00B0122CC4D0500B05E76 /* app-constants.swift */,
+				179798DC22CD640100F2C512 /* Form.swift */,
+				179798DE22CD643A00F2C512 /* Validatable.swift */,
+				179798E222CD64A700F2C512 /* app-extensions.swift */,
 			);
 			path = "commom-utils";
 			sourceTree = "<group>";
@@ -489,9 +501,11 @@
 				17C00B2822CC5E7B00B05E76 /* Year.swift in Sources */,
 				17C00B2522CC5E7B00B05E76 /* Info.swift in Sources */,
 				17C00B1B22CC5C0700B05E76 /* InvestimentoPresenter.swift in Sources */,
+				179798E122CD648A00F2C512 /* LabelDownCell.swift in Sources */,
 				17C00B2B22CC5E7B00B05E76 /* MoreInfo.swift in Sources */,
 				17C00B0822CC504500B05E76 /* ContatoFormPresenter.swift in Sources */,
 				17C00AFD22CC4B8000B05E76 /* Cell.swift in Sources */,
+				179798DF22CD643A00F2C512 /* Validatable.swift in Sources */,
 				17C00B2A22CC5E7B00B05E76 /* InvestimentoInfo.swift in Sources */,
 				17C00B0622CC4EA100B05E76 /* ContatoFormProtocols.swift in Sources */,
 				17C00B3422CCE91D00B05E76 /* TextFieldCell.swift in Sources */,
@@ -502,9 +516,11 @@
 				17C00B1722CC5A6800B05E76 /* InvestimentoViewController.swift in Sources */,
 				17C00B2622CC5E7B00B05E76 /* Month.swift in Sources */,
 				17C00B3922CCE9F200B05E76 /* CheckboxCell.swift in Sources */,
+				179798DD22CD640100F2C512 /* Form.swift in Sources */,
 				17C00B0A22CC51F300B05E76 /* ContatoFormRouter.swift in Sources */,
 				17C00B1922CC5B8300B05E76 /* InvestimentoInteractor.swift in Sources */,
 				17C00B1D22CC5D0900B05E76 /* InvestimentoRouter.swift in Sources */,
+				179798E322CD64A700F2C512 /* app-extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -67,46 +67,6 @@ class TextFieldCell: UITableViewCell, Validatable {
     func setForm(form: Form) { self.form = form }
 }
 
-extension String {
-    
-    
-    var withoutSpecialCharacters: String {
-        return self.components(separatedBy: CharacterSet.punctuationCharacters).joined(separator: "")
-    }
-    
-    
-    var removingWhitespaces: String {
-        return components(separatedBy: .whitespaces).joined()
-    }
-    
-    
-}
-
-
-extension UITextField {
-    
-    func underlined(){
-        
-        self.borderStyle = .none
-        self.layer.backgroundColor = UIColor.white.cgColor
-        
-        self.layer.masksToBounds = false
-        self.layer.shadowColor = UIColor.lightGray.cgColor
-        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-        self.layer.shadowOpacity = 1.0
-        self.layer.shadowRadius = 0.03702943
-        
-    }
-    
-    func validated(){
-       self.layer.shadowColor = UIColor.green.cgColor
-    }
-    
-    func invalidated(){
-        self.layer.shadowColor = UIColor.red.cgColor
-    }
-    
-}
 
 
 class MaskCelular: NSObject, UITextFieldDelegate {

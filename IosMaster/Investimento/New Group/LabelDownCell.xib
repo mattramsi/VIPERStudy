@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DINPro-Regular.otf">
+            <string>DINPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelDownCell" id="hFF-fp-sdg" customClass="LabelDownCell" customModule="IosMaster" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hFF-fp-sdg" id="URM-qD-Pex">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 meses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIL-BZ-noK">
+                        <rect key="frame" x="0.0" y="14" width="51" height="15.5"/>
+                        <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="12"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOC-cn-noJ">
+                        <rect key="frame" x="347" y="6" width="67" height="32"/>
+                        <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="12"/>
+                        <state key="normal" title="Baixar" image="ic-download">
+                            <color key="titleColor" red="1" green="0.1465411422" blue="0.065462496189999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="download:" destination="hFF-fp-sdg" eventType="touchUpInside" id="W3A-ZQ-eh4"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ZOC-cn-noJ" secondAttribute="trailing" id="Rdx-ft-Fcp"/>
+                    <constraint firstItem="bIL-BZ-noK" firstAttribute="centerY" secondItem="URM-qD-Pex" secondAttribute="centerY" id="TUu-Yr-Wnn"/>
+                    <constraint firstItem="bIL-BZ-noK" firstAttribute="leading" secondItem="URM-qD-Pex" secondAttribute="leadingMargin" constant="-16" id="g43-tX-s1U"/>
+                    <constraint firstItem="ZOC-cn-noJ" firstAttribute="centerY" secondItem="URM-qD-Pex" secondAttribute="centerY" id="kt9-zG-pFv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lbl_name" destination="bIL-BZ-noK" id="Onz-Nu-yn6"/>
+            </connections>
+            <point key="canvasLocation" x="-278" y="-189"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic-download" width="32" height="32"/>
+    </resources>
+</document>

@@ -16,6 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        let contato = ContatoFormRouter.createModule()
+//        let investimento = InvestimentoRouter.createModule()
+//        
+//        let tabBarController = UITabBarController()
+//        tabBarController.tabBar.barTintColor = .red
+//        tabBarController.tabBar.tintColor = .white
+//        tabBarController.viewControllers = [investimento, contato]
+//        
+//        let navigationController = UINavigationController()
+//        navigationController.viewControllers = [tabBarController]
+//        
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.rootViewController = navigationController
+//        window?.makeKeyAndVisible()
         return true
     }
 
@@ -42,5 +56,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension UIApplication {
+    
+    class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        
+        if let navigationController = controller as? UINavigationController {
+            return topViewController(controller: navigationController.visibleViewController)
+        }
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return topViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
+    }
 }
 

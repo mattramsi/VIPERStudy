@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DINPro-Medium.otf">
+            <string>DINPro-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MensagemEnviadaView" customModule="IosMaster" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mensagem enviada com sucesso :]" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ime-YX-koP">
+                    <rect key="frame" x="32" y="198" width="256" height="46.5"/>
+                    <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fu6-Ul-q5p">
+                    <rect key="frame" x="76.5" y="364.5" width="167" height="33"/>
+                    <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="16"/>
+                    <state key="normal" title="Enviar nova mensagem">
+                        <color key="titleColor" red="1" green="0.1465411422" blue="0.065462496189999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="enviarNovaMensagem:" destination="iN0-l3-epB" eventType="touchUpInside" id="V2y-8o-c2N"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obrigado!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjo-th-OO2">
+                    <rect key="frame" x="129" y="150" width="62" height="18"/>
+                    <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="14"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ime-YX-koP" firstAttribute="top" secondItem="cjo-th-OO2" secondAttribute="bottom" constant="30" id="3h6-Q3-BAc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ime-YX-koP" secondAttribute="trailing" constant="32" id="4DX-Uf-bK6"/>
+                <constraint firstItem="cjo-th-OO2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="BQq-FQ-fqg"/>
+                <constraint firstItem="Fu6-Ul-q5p" firstAttribute="top" secondItem="ime-YX-koP" secondAttribute="bottom" constant="120" id="YwO-af-ERa"/>
+                <constraint firstItem="ime-YX-koP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZIZ-BC-RFz"/>
+                <constraint firstItem="cjo-th-OO2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="130" id="cfG-5i-KRg"/>
+                <constraint firstItem="Fu6-Ul-q5p" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pb9-B3-xsr"/>
+                <constraint firstItem="ime-YX-koP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="vNp-Bf-PZx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>
